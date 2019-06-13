@@ -1,0 +1,1 @@
+/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/ipaddress-1.0.22-py2.7.egg/ipaddress.py

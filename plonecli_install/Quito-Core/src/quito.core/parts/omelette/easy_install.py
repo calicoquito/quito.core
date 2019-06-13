@@ -1,0 +1,1 @@
+/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/lib/python2.7/site-packages/easy_install.py

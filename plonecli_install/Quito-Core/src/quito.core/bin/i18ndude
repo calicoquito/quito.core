@@ -1,0 +1,17 @@
+#!/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/python2.7
+
+import sys
+sys.path[0:0] = [
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/i18ndude-5.3.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/zope.tal-4.4-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/zope.interface-4.6.0-py2.7-linux-x86_64.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/zope.i18nmessageid-4.3.1-py2.7-linux-x86_64.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/lxml-4.3.3-py2.7-linux-x86_64.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/six-1.12.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/lib/python2.7/site-packages',
+  ]
+
+import i18ndude.script
+
+if __name__ == '__main__':
+    sys.exit(i18ndude.script.main())

@@ -1,0 +1,7 @@
+#!/bin/bash
+export TZ=UTC
+/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/coverage run bin/test $*
+/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/coverage html
+/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/coverage report -m --fail-under=90
+# Fail (exit status 1) if coverage returns exit status 2 (this happens
+# when test coverage is below 100%.

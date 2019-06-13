@@ -1,0 +1,28 @@
+#!/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/python2.7
+
+import sys
+sys.path[0:0] = [
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/webencodings-0.5.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/bleach-3.1.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/pkginfo-1.5.0.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/readme_renderer-24.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/requests_toolbelt-0.9.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/tqdm-4.31.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/colorama-0.4.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/twine-1.13.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/zest.releaser-6.18.2-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/six-1.12.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/requests-2.21.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/urllib3-1.24.2-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/idna-2.8-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/chardet-3.0.4-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/certifi-2018.11.29-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/docutils-0.14-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/Pygments-2.3.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/lib/python2.7/site-packages',
+  ]
+
+import zest.releaser.bumpversion
+
+if __name__ == '__main__':
+    sys.exit(zest.releaser.bumpversion.main())

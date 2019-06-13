@@ -1,0 +1,10 @@
+setuptools
+six
+zope.component
+zope.configuration
+zope.pagetemplate
+zope.publisher
+zope.security
+
+[test]
+Zope2

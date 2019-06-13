@@ -1,0 +1,6 @@
+Products.ZCatalog
+ZODB3
+Zope2>=2.13.0a3
+setuptools
+six
+zope.interface

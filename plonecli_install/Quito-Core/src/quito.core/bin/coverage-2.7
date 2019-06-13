@@ -1,0 +1,11 @@
+#!/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/python2.7
+
+import sys
+sys.path[0:0] = [
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/coverage-4.5.2-py2.7-linux-x86_64.egg',
+  ]
+
+import coverage.cmdline
+
+if __name__ == '__main__':
+    sys.exit(coverage.cmdline.main())

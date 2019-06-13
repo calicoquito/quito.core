@@ -1,0 +1,13 @@
+#!/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/python2.7
+
+import sys
+sys.path[0:0] = [
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/mr.developer-2.0.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/six-1.12.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/lib/python2.7/site-packages',
+  ]
+
+import mr.developer.develop
+
+if __name__ == '__main__':
+    sys.exit(mr.developer.develop.develop())

@@ -1,0 +1,1 @@
+/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/pathlib-1.0.1-py2.7.egg/pathlib.py

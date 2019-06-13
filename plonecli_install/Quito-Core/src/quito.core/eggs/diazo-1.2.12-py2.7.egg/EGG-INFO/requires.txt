@@ -1,0 +1,14 @@
+cssselect
+future
+lxml
+setuptools
+six
+
+[test]
+WebOb>=1.4
+formencode
+repoze.xmliter>=0.6
+
+[wsgi]
+WebOb>=1.4
+repoze.xmliter>=0.6

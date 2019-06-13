@@ -1,0 +1,40 @@
+#!/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/python2.7
+
+import sys
+sys.path[0:0] = [
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/plone.recipe.codeanalysis-3.0.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8-3.3.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/pyflakes-1.5.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/pycodestyle-2.0.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/mccabe-0.6.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/enum34-1.1.6-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/configparser-3.7.4-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_todo-0.7-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_string_format-0.2.3-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_quotes-2.0.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_print-3.1.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_plone_hasattr-0.2.post0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_plone_api-1.4-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_pep3101-1.2.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_isort-2.7.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_deprecated-1.3-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_debugger-3.1.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_commas-2.0.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_coding-1.3.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/flake8_blind_except-0.1.1-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/zc.recipe.egg-2.0.7-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/lxml-4.3.3-py2.7-linux-x86_64.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/check_manifest-0.39-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/six-1.12.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/testfixtures-6.9.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/isort-4.3.20-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/toml-0.10.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/futures-3.2.0-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs/backports.functools_lru_cache-1.5-py2.7.egg',
+  '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/lib/python2.7/site-packages',
+  ]
+
+import plone.recipe.codeanalysis.i18ndude
+
+if __name__ == '__main__':
+    sys.exit(plone.recipe.codeanalysis.i18ndude.console_script({'importchecker': 'False', 'chameleon-lint': 'False', 'jshint-exclude': '', 'clean-lines': 'False', 'recipe': 'plone.recipe.codeanalysis[recommended]', 'find-untranslated': 'False', 'zptlint': 'False', 'pre-push-return-status-codes': 'False', 'jshint': 'False', 'csslint-bin': 'csslint', 'clean-lines-exclude': '', 'i18ndude-bin': '', 'zptlint-bin': '', 'jscs-bin': 'jscs', 'index': 'https://pypi.python.org/simple/', 'executable': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin/python2.7', 'eggs-directory': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs', 'jshint-suppress-warnings': 'True', 'pre-commit-return-status-codes': 'False', 'jshint-bin': 'jshint', 'location': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/parts/code-analysis', 'scsslint-config': '', '_e': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/eggs', '_d': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/develop-eggs', '_b': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin', 'flake8': 'True', 'bin-directory': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/bin', 'dependencychecker': 'False', 'jscs-exclude': '', 'scsslint': 'False', 'pre-commit-hook': 'True', 'flake8-extensions': '', 'find-links': 'https://dist.plone.org/release/5.2-latest/\nhttps://dist.plone.org/thirdparty/', 'return-status-codes': 'False', 'dependencychecker-bin': 'dependencychecker', 'pre-push-hook': 'False', 'check-manifest': 'False', 'csslint': 'False', 'jscs': 'False', 'xmllint': 'False', 'develop-eggs-directory': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/develop-eggs', 'check-manifest-directory': '.', 'flake8-ignore': 'E501', 'scsslint-bin': 'scss-lint', 'jenkins': 'False', 'directory': '/home/phillipj/Desktop/Calico/Quito/Quito-Core/src/quito.core/src/quito', 'importchecker-bin': 'importchecker', 'multiprocessing': 'False', 'flake8-filesystem': 'False'}))
