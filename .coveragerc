@@ -1,0 +1,6 @@
+[report]
+include =
+    src/quito/*
+omit =
+    */test*
+    */upgrades/*
