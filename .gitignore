@@ -19,6 +19,7 @@ src/*
 dist/*
 test.plone_addon/
 var/
+plonecli_install/
 # files
 .installed.cfg
 .mr.developer.cfg
