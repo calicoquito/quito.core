@@ -1,0 +1,5 @@
+==========
+quito.core
+==========
+
+User documentation
