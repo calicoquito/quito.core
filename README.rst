@@ -13,6 +13,21 @@ Features
 
 - Can be bullet points
 
+Installation
+------------
+
+Setup virtualenv, install requirements and build::
+
+    virtualenv --clear .
+    ./bin/pip install -r requirements.txt
+    ./bin/buildout
+
+Launch with the following command::
+
+    ./bin/instance fg
+
+The system provides a REST api for capturing of syndrome data by Epi Week. The api can be consumed by REST clients.
+
 
 Examples
 --------
