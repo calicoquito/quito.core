@@ -17,23 +17,12 @@ Features
 
 
 
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
-
 Documentation
 -------------
 
 Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
 
 
-Translations
-------------
-
-There are no translations currently
 
 Installation
 ------------
@@ -81,7 +70,7 @@ Install quito.core by adding it to your buildout::
 
 and then running ``bin/buildout``
 
-Prebuilded Docker Image
+Run Docker Image
 -----------------------
 Run the docker image for quito.core using
 ::
@@ -91,8 +80,8 @@ Run the docker image for quito.core using
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/quito.core/issues
-- Source Code: https://github.com/collective/quito.core
+- Issue Tracker: https://github.com/calicoquito/quito.core/issues
+- Source Code: https://github.com/calicoquito/quito.core
 - Documentation: https://docs.plone.org/foo/bar
 
 
