@@ -55,7 +55,7 @@ Then you can launch it with (replace <imagehash> with your docker image hash:
 
    docker run -it -p 8080:8080 <imagehash>
 
-Installation of Addon to a Plone site
+Installation of Addon To A Plone Site
 --------------------------------------
 
 Install quito.core by adding it to your buildout::
