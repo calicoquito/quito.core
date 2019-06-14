@@ -79,7 +79,7 @@ Run the docker image for quito.core using
 
 How to use API
 ----------------
-An Insomnia file relating to the use of the quito.core api. 
+An Insomnia file relating to the use of the quito.core api can be found under the guide directory. 
 It cantains the api calls as well as the relating documentations.
 
 Contribute
