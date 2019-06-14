@@ -77,6 +77,11 @@ Run the docker image for quito.core using
    docker run -p 8080:8080 progsmart/quito.core:latest
 ::
 
+How to use API
+----------------
+An Insomnia file relating to the use of the quito.core api. 
+It cantains the api calls as well as the relating documentations.
+
 Contribute
 ----------
 
