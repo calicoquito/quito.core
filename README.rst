@@ -22,6 +22,12 @@ Documentation
 
 Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
 
+Latest Release
+---------------
+The latest Release for quito.core is currently pre-alpha v00001. 
+This version is not for production and mainly for testing procedure. This version contains information on how to 
+manipulate the plone site that can be found under the "Guide" folder. It contains both data volume for the docker
+installation as well as an insomina file explaining the various api comands that can be used to managed the platform.
 
 
 Installation
@@ -55,6 +61,21 @@ Then you can launch it with (replace <imagehash> with your docker image hash:
 
    docker run -it -p 8080:8080 <imagehash>
 
+Run Docker Image
+-----------------------
+Run the docker image for quito.core using.
+::
+   chown -R 500:500 "data volume file"
+   docker run -v $(pwd)/"data volume file":/data -p 8080:8080 progsmart/quito.core:latest
+::
+
+Ensure that the quito.core volume data file is downloaded in order to load the site from it. 
+
+How to use API
+----------------
+An Insomnia file relating to the use of the quito.core api can be found under the guide directory. 
+It cantains the api calls as well as the relating documentations.
+
 Installation of Addon To A Plone Site
 --------------------------------------
 
@@ -69,18 +90,6 @@ Install quito.core by adding it to your buildout::
 
 
 and then running ``bin/buildout``
-
-Run Docker Image
------------------------
-Run the docker image for quito.core using
-::
-   docker run -p 8080:8080 progsmart/quito.core:latest
-::
-
-How to use API
-----------------
-An Insomnia file relating to the use of the quito.core api can be found under the guide directory. 
-It cantains the api calls as well as the relating documentations.
 
 Contribute
 ----------
