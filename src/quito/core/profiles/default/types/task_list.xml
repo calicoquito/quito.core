@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <object name="task_list" meta_type="Dexterity FTI" i18n:domain="plone"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title" i18n:translate="">Task List</property>
@@ -10,7 +10,7 @@
     name="add_view_expr">string:${folder_url}/++add++task_list</property>
  <property name="link_target"></property>
  <property name="immediate_view">view</property>
- <property name="global_allow">True</property>
+ <property name="global_allow">False</property>
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types">
   <element value="task"/>
@@ -27,20 +27,16 @@
   <element value="plone.app.dexterity.behaviors.metadata.IDublinCore"/>
   <element value="plone.app.content.interfaces.INameFromTitle"/>
   <element
-     value="plone.app.dexterity.behaviors.exclfromnav.IExcludeFromNavigation"/>
-  <element
      value="Products.CMFPlone.interfaces.constrains.ISelectableConstrainTypes"/>
-  <element value="plone.app.layout.navigation.interfaces.INavigationRoot"/>
   <element
      value="plone.app.dexterity.behaviors.nextprevious.INextPreviousToggle"/>
   <element value="plone.app.dexterity.behaviors.id.IShortName"/>
-  <element value="plone.app.versioningbehavior.behaviors.IVersionable"/>
  </property>
  <property name="schema"></property>
  <property name="model_source">
-  &lt;model xmlns=&quot;http://namespaces.plone.org/supermodel/schema&quot;&gt;
-      &lt;schema&gt;
-      &lt;/schema&gt;
+  &lt;model xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
+  &lt;schema&gt;
+  &lt;/schema&gt;
   &lt;/model&gt;</property>
  <property name="model_file"></property>
  <property name="schema_policy">dexterity</property>
@@ -49,13 +45,13 @@
  <alias from="sharing" to="@@sharing"/>
  <alias from="view" to="(selected layout)"/>
  <action title="View" action_id="view" category="object" condition_expr=""
-    icon_expr="" link_target="" url_expr="string:${object_url}"
+    description="" icon_expr="" link_target="" url_expr="string:${object_url}"
     visible="True">
   <permission value="View"/>
  </action>
  <action title="Edit" action_id="edit" category="object" condition_expr=""
-    icon_expr="" link_target="" url_expr="string:${object_url}/edit"
-    visible="True">
+    description="" icon_expr="" link_target=""
+    url_expr="string:${object_url}/edit" visible="True">
   <permission value="Modify portal content"/>
  </action>
 </object>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <object name="task" meta_type="Dexterity FTI" i18n:domain="plone"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title" i18n:translate="">Task</property>
@@ -9,7 +9,7 @@
  <property name="add_view_expr">string:${folder_url}/++add++task</property>
  <property name="link_target"></property>
  <property name="immediate_view">view</property>
- <property name="global_allow">True</property>
+ <property name="global_allow">False</property>
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types"/>
  <property name="allow_discussion">False</property>
@@ -28,12 +28,30 @@
   <element value="plone.app.dexterity.behaviors.metadata.IOwnership"/>
   <element
      value="plone.app.contenttypes.behaviors.richtext.IRichTextBehavior"/>
-  <element value="plone.app.event.dx.behaviors.IEventContact"/>
+  <element value="plone.app.dexterity.behaviors.id.IShortName"/>
+  <element
+     value="plone.app.dexterity.behaviors.nextprevious.INextPreviousToggle"/>
  </property>
  <property name="schema"></property>
  <property
-    name="model_source">&lt;model xmlns:form=&quot;http://namespaces.plone.org/supermodel/form&quot; xmlns:i18n=&quot;http://xml.zope.org/namespaces/i18n&quot; xmlns:lingua=&quot;http://namespaces.plone.org/supermodel/lingua&quot; xmlns:marshal=&quot;http://namespaces.plone.org/supermodel/marshal&quot; xmlns:security=&quot;http://namespaces.plone.org/supermodel/security&quot; xmlns:users=&quot;http://namespaces.plone.org/supermodel/users&quot; xmlns=&quot;http://namespaces.plone.org/supermodel/schema&quot;&gt;
-    &lt;schema/&gt;
+    name="model_source">&lt;model xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
+    &lt;schema&gt;
+      &lt;field name="task_detail" type="plone.app.textfield.RichText"&gt;
+        &lt;description&gt;The main details of what should be done for this task&lt;/description&gt;
+        &lt;title&gt;Task Detail&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="additional_files" type="plone.namedfile.field.NamedBlobFile"&gt;
+        &lt;description&gt;Additional file that is necessary for the task&lt;/description&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Additional Files&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="complete" type="zope.schema.Bool"&gt;
+        &lt;default&gt;False&lt;/default&gt;
+        &lt;description&gt;A Boolean to tell if the task is completed or not&lt;/description&gt;
+        &lt;title&gt;Complete&lt;/title&gt;
+        &lt;form:widget type="z3c.form.browser.radio.RadioFieldWidget"/&gt;
+      &lt;/field&gt;
+    &lt;/schema&gt;
   &lt;/model&gt;</property>
  <property name="model_file"></property>
  <property name="schema_policy">dexterity</property>
@@ -42,13 +60,13 @@
  <alias from="sharing" to="@@sharing"/>
  <alias from="view" to="(selected layout)"/>
  <action title="View" action_id="view" category="object" condition_expr=""
-    icon_expr="" link_target="" url_expr="string:${object_url}"
+    description="" icon_expr="" link_target="" url_expr="string:${object_url}"
     visible="True">
   <permission value="View"/>
  </action>
  <action title="Edit" action_id="edit" category="object" condition_expr=""
-    icon_expr="" link_target="" url_expr="string:${object_url}/edit"
-    visible="True">
+    description="" icon_expr="" link_target=""
+    url_expr="string:${object_url}/edit" visible="True">
   <permission value="Modify portal content"/>
  </action>
 </object>

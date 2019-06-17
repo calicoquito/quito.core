@@ -4,5 +4,6 @@
  <object name="task" meta_type="Dexterity FTI"/>
  <object name="project" meta_type="Dexterity FTI"/>
  <object name="task_list" meta_type="Dexterity FTI"/>
+ <object name="project_list" meta_type="Dexterity FTI"/>
  <!-- -*- extra stuff goes here -*- -->
 </object>
