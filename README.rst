@@ -70,7 +70,7 @@ Then you can launch it with (replace <imagehash> with your docker image hash:
    docker run -it -p 8080:8080 <imagehash>
 
 How to use API
-...............
+---------------
 An Insomnia file relating to the use of the quito.core api can be found under the guide directory. 
 It cantains the api calls as well as the relating documentations on how to use them.
 
