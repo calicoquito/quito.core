@@ -16,6 +16,7 @@ Features
 - creation of tasks for various task list
 - Workflow Setup
 - Thre user group with varying permissions (organizer, volunteer, participant)
+- Commenting or chat capability for projects 
 
 
 
