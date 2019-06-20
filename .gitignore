@@ -21,6 +21,8 @@ test.plone_addon/
 var/
 plonecli_install/
 quito.data/
+linux/
+windows/
 # files
 .installed.cfg
 .mr.developer.cfg
@@ -32,6 +34,9 @@ report.html
 .vscode/
 .tox/
 reports/
+docker-compose.yml
+run_l.sh
+run_w.bat
 # excludes
 !.coveragerc
 !.editorconfig
