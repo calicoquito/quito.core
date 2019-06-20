@@ -38,7 +38,9 @@ On startup you would be greeted with the homepage along with some test data that
 Installation
 ------------
 
-## Source File  
+Source File
+************
+
 
 Setup virtualenv, install requirements and build::
 
@@ -51,7 +53,8 @@ Launch with the following command::
     ./bin/instance fg
 
 
-### Create Docker Image
+Create Docker Image
+*******************
 
 From the root folder of this addon run:
 
@@ -67,7 +70,7 @@ Then you can launch it with (replace <imagehash> with your docker image hash:
    docker run -it -p 8080:8080 <imagehash>
 
 How to use API
-----------------
+...............
 An Insomnia file relating to the use of the quito.core api can be found under the guide directory. 
 It cantains the api calls as well as the relating documentations on how to use them.
 
