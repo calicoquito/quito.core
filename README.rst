@@ -14,6 +14,8 @@ Features
 - Creation of projects/Events
 - creation of a tasks list for the project
 - creation of tasks for various task list
+- Workflow Setup
+- Thre user group with varying permissions (organizer, volunteer, participant)
 
 
 
@@ -25,13 +27,20 @@ Full documentation for end users can be found in the "docs" folder, and is also 
 Latest Release
 ---------------
 The latest Release for quito.core is currently pre-alpha v00001. 
-This version is not for production and mainly for testing procedure. This version contains information on how to 
-manipulate the plone site that can be found under the "Guide" folder. It contains both data volume for the docker
-installation as well as an insomina file explaining the various api comands that can be used to managed the platform.
+This version is not for production and mainly for testing procedure. It includes the documentation on how to installl Quito.core using docker on wither Linux or windows. It has troubleshooting techniques that can be used to mnually install quito. It contains both data volume for the docker installation as well as an insomina file explaining the various api comands that can be used to managed the platform. This release Only focuses on the creation and viewing of projects with its various tasks using three types of user with different permisiions. 
 
+Setup with Docker
+-----------------
+To setup quito.core download the installation file for the latest release version and follow the installation instructions.
+On startup you would be greeted with the homepage along with some test data that was previously installed to the system. The system can be left like this or customize base on your preference.
+- The latest installation version currently is pre-alpha v00001
 
 Installation
 ------------
+
+Source File
+************
+
 
 Setup virtualenv, install requirements and build::
 
@@ -43,11 +52,10 @@ Launch with the following command::
 
     ./bin/instance fg
 
-The system provides a REST api for managing Projects and events.
-
 
 Create Docker Image
--------------------
+*******************
+
 From the root folder of this addon run:
 
 ::
@@ -61,20 +69,10 @@ Then you can launch it with (replace <imagehash> with your docker image hash:
 
    docker run -it -p 8080:8080 <imagehash>
 
-Run Docker Image
------------------------
-Run the docker image for quito.core using.
-::
-   chown -R 500:500 "data volume file"
-   docker run -v $(pwd)/"data volume file":/data -p 8080:8080 progsmart/quito.core:latest
-::
-
-Ensure that the quito.core volume data file is downloaded in order to load the site from it. 
-
 How to use API
-----------------
+---------------
 An Insomnia file relating to the use of the quito.core api can be found under the guide directory. 
-It cantains the api calls as well as the relating documentations.
+It cantains the api calls as well as the relating documentations on how to use them.
 
 Installation of Addon To A Plone Site
 --------------------------------------
