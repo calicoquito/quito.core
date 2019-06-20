@@ -27,8 +27,7 @@ Full documentation for end users can be found in the "docs" folder, and is also 
 
 Latest Release
 ---------------
-- The latest Release for quito.core is currently pre-alpha v00002. 
-This version is not for production and mainly for testing procedure. It includes the documentation on how to installl Quito.core using docker on either Linux or windows. It has troubleshooting techniques that can be used to mnually install quito. It contains both data volume for the docker installation as well as an insomina file explaining the various api comands that can be used to managed the platform. This release Only focuses on the creation and viewing of projects with its various tasks using three types of user with different permisiions. 
+- The latest Release for quito.core is currently pre-alpha v00002. This version is not for production and mainly for testing procedure. It includes the documentation on how to installl Quito.core using docker on either Linux or windows. It has troubleshooting techniques that can be used to mnually install quito. It contains both data volume for the docker installation as well as an insomina file explaining the various api comands that can be used to managed the platform. This release Only focuses on the creation and viewing of projects with its various tasks using three types of user with different permisiions. 
 
 - The discusiion capability wasadded to v00002 so that the participants of project would be able to communicate with each other on a specific  Project. Only the administrator would be able to delete any messages sent from anyone.  
 
