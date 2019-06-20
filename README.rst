@@ -35,7 +35,8 @@ Setup with Docker
 -----------------
 To setup quito.core download the installation file for the latest release version and follow the installation instructions.
 On startup you would be greeted with the homepage along with some test data that was previously installed to the system. The system can be left like this or customize base on your preference.
-- The latest installation version currently is pre-alpha v00001
+
+- The latest installation version currently is pre-alpha v00002
 
 Installation
 ------------
