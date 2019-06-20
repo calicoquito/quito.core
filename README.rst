@@ -38,33 +38,33 @@ On startup you would be greeted with the homepage along with some test data that
 Installation
 ------------
 
-   ## Source File  
+## Source File  
 
-      Setup virtualenv, install requirements and build::
+Setup virtualenv, install requirements and build::
 
-          virtualenv --clear .
-          ./bin/pip install -r requirements.txt
-          ./bin/buildout
+    virtualenv --clear .
+    ./bin/pip install -r requirements.txt
+    ./bin/buildout
 
-      Launch with the following command::
+Launch with the following command::
 
-          ./bin/instance fg
+    ./bin/instance fg
 
 
-   ### Create Docker Image
+### Create Docker Image
 
-      From the root folder of this addon run:
+From the root folder of this addon run:
 
-      ::
+::
 
-           docker build .
+     docker build .
 
-      The output will generate a unique docker image (note the image hash)
-      Then you can launch it with (replace <imagehash> with your docker image hash:
+The output will generate a unique docker image (note the image hash)
+Then you can launch it with (replace <imagehash> with your docker image hash:
 
-      ::
+::
 
-         docker run -it -p 8080:8080 <imagehash>
+   docker run -it -p 8080:8080 <imagehash>
 
 How to use API
 ----------------
