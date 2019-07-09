@@ -137,7 +137,7 @@
         "ConnMaxLifetimeMilliseconds": 3600000,
         "MaxOpenConns": 300,
         "Trace": false,
-        "AtRestEncryptKey": "7biSiWkTFBJgPicmV0ldybRBOnqik9J03AANkZVvXjG5eLjO",
+        "AtRestEncryptKey": "wUZXLfp7opkPB4tslcstpaDaTlti2gtQFLK2RMasnoBFCjxG",
         "QueryTimeout": 30
     },
     "LogSettings": {
@@ -175,7 +175,7 @@
         "DriverName": "local",
         "Directory": "/mattermost/data/",
         "EnablePublicLink": true,
-        "PublicLinkSalt": "SHXokeGTdZLiof6LrHTiTF1Ntuxr0SHHJVtH94tnT00DRVdc",
+        "PublicLinkSalt": "nZdMl0yhpbR9D4sgvzg3Pbd85mtjArsghy2s6hJkvKQbuebV",
         "InitialFont": "nunito-bold.ttf",
         "AmazonS3AccessKeyId": "",
         "AmazonS3SecretAccessKey": "",

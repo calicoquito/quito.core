@@ -44,4 +44,6 @@ run_w.bat
 !.gitignore
 !.gitkeep
 !.travis.yml
-!src/quito
+!src/quito/
+!mattermost-docker/
+!mattermost-docker/docker-compose.yml
