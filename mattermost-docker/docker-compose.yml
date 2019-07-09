@@ -9,10 +9,12 @@ services:
     volumes:
       - ./volumes/db/var/lib/postgresql/data:/var/lib/postgresql/data
       - /etc/localtime:/etc/localtime:ro
-    environment:
-      - POSTGRES_USER=mmuser
-      - POSTGRES_PASSWORD=mmuser_password
-      - POSTGRES_DB=mattermost
+    env_file:
+      - ./env/db.env
+    #environment:
+     # - POSTGRES_USER=mmuser
+     # - POSTGRES_PASSWORD=mmuser_password
+     # - POSTGRES_DB=mattermost
     # uncomment the following to enable backup
     #  - AWS_ACCESS_KEY_ID=XXXX
     #  - AWS_SECRET_ACCESS_KEY=XXXX
@@ -35,11 +37,13 @@ services:
       - ./volumes/app/mattermost/plugins:/mattermost/plugins:rw
       - ./volumes/app/mattermost/client-plugins:/mattermost/client/plugins:rw
       - /etc/localtime:/etc/localtime:ro
-    environment:
+    env_file:
+      - ./env/app.env
+    #environment:
       # set same as db credentials and dbname
-      - MM_USERNAME=mmuser
-      - MM_PASSWORD=mmuser_password
-      - MM_DBNAME=mattermost
+      #- MM_USERNAME=mmuser
+      #- MM_PASSWORD=mmuser_password
+      #- MM_DBNAME=mattermost
       # in case your config is not in default location
       #- MM_CONFIG=/mattermost/config/config.json
 
@@ -54,6 +58,8 @@ services:
       # This directory must have cert files if you want to enable SSL
       - ./volumes/web/cert:/cert:ro
       - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - ./env/web.env
     # Uncomment for SSL
     # environment:
     #  - MATTERMOST_ENABLE_SSL=true
