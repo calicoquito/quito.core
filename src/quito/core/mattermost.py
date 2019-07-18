@@ -393,20 +393,19 @@ def test(item = "", event = ""):
 	ploneAddlatentUsers()
 
 def test2(item = "", event = ""):
+	print item
 	#pdb.set_trace()
 
-
-if __name__== "__main__":
-
-	token = authenticate(admin_username,getSAPassword())
-	team_id = getTeamID(token,"plone10")
-	# print createChannel(token,team,"Test Project2")
-	#print team_id
-	# channel_id = getChannelID(token,team_id,"asshf")
-	# print addMembersToChannel(token, team_id, channel_id,["user1","user2","user3"])
-	# print delMemberFromChannel(token, team_id, channel_id,["user1"])
-	#print deleteTeam(token, team_id)
-	#print isAdminAdded(token, team_id)
-	#if(not isAdminAdded(token, team_id)):print addAdminToTeam(token, team_id)
-	#print addAdminToTeam(token, team_id)
-	print addLatentUsers(token, team_id, ["user1", "user2"])
+# if __name__== "__main__":
+# 	token = authenticate(admin_username,getSAPassword())
+# 	team_id = getTeamID(token,"plone10")
+# 	# print createChannel(token,team,"Test Project2")
+# 	#print team_id
+# 	# channel_id = getChannelID(token,team_id,"asshf")
+# 	# print addMembersToChannel(token, team_id, channel_id,["user1","user2","user3"])
+# 	# print delMemberFromChannel(token, team_id, channel_id,["user1"])
+# 	#print deleteTeam(token, team_id)
+# 	#print isAdminAdded(token, team_id)
+# 	#if(not isAdminAdded(token, team_id)):print addAdminToTeam(token, team_id)
+# 	#print addAdminToTeam(token, team_id)
+# 	print addLatentUsers(token, team_id, ["user1", "user2"])
