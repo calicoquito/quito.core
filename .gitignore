@@ -40,6 +40,9 @@ run_w.bat
 app.env
 db.env
 web.env
+quito.env
+Guide/mattermost-docker/install.sh
+Guide/mattermost-docker/test_install.sh
 # excludes
 !.coveragerc
 !.editorconfig
@@ -48,5 +51,3 @@ web.env
 !.gitkeep
 !.travis.yml
 !src/quito/
-!mattermost-docker/
-!mattermost-docker/docker-compose.yml

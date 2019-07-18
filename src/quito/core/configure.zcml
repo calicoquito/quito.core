@@ -21,6 +21,47 @@
 
   <include file="upgrades.zcml" />
 
+  <subscriber
+  for=".contenttypes.IProject
+       zope.lifecycleevent.interfaces.IObjectAddedEvent"
+  handler=".mattermost.ploneCreateChannel"
+  />
+
+  <subscriber
+  for=".contenttypes.IProject
+       zope.lifecycleevent.interfaces.IObjectRemovedEvent"
+  handler=".mattermost.ploneDeleteChannel"
+  />
+
+  <subscriber
+  for=".contenttypes.IProject
+       zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+  handler=".mattermost.ploneModifyChannel"
+  />
+
+  <subscriber
+  for="Products.PluggableAuthService.interfaces.events.IPrincipalCreatedEvent"
+  handler=".mattermost.test"
+  />
+
+  <subscriber
+        for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
+        handler=".mattermost.test"
+  />
+
+  <subscriber
+  for=".contenttypes.IProjectlist
+       zope.lifecycleevent.interfaces.IObjectAddedEvent"
+  handler=".mattermost.test"
+  />
+
+  <subscriber
+  for=".contenttypes.IUser
+       zope.lifecycleevent.interfaces.IObjectAddedEvent"
+  handler=".mattermost.test2"
+  />
+  
+
   <genericsetup:registerProfile
       name="default"
       title="quito.core"
@@ -45,5 +86,6 @@
       />
 
   <!-- -*- extra stuff goes here -*- -->
+
 
 </configure>

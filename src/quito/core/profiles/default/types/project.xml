@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<object name="project" meta_type="Dexterity FTI" i18n:domain="plone"
+<object name="project" meta_type="Dexterity FTI" i18n:domain="quito.core"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title" i18n:translate="">Project</property>
  <property name="description"
@@ -13,6 +13,8 @@
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types">
   <element value="task_list"/>
+  <element value="group"/>
+  <element value="task"/>
  </property>
  <property name="allow_discussion">True</property>
  <property name="default_view">view</property>
@@ -27,7 +29,6 @@
   <element value="plone.app.content.interfaces.INameFromTitle"/>
   <element value="plone.app.dexterity.behaviors.discussion.IAllowDiscussion"/>
   <element value="plone.app.dexterity.behaviors.metadata.IPublication"/>
-  <element value="plone.app.event.dx.behaviors.IEventAttendees"/>
   <element value="plone.app.event.dx.behaviors.IEventBasic"/>
   <element value="plone.app.event.dx.behaviors.IEventContact"/>
   <element value="plone.app.event.dx.behaviors.IEventLocation"/>
@@ -44,8 +45,9 @@
   <element value="plone.app.versioningbehavior.behaviors.IVersionable"/>
   <element value="plone.app.contenttypes.behaviors.leadimage.ILeadImage"/>
   <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>
+
  </property>
- <property name="schema"></property>
+ <property name="schema">quito.core.contenttypes.IProject</property>
  <property name="model_source">
   &lt;model xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
   &lt;schema&gt;

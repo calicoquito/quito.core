@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<object name="project_list" meta_type="Dexterity FTI" i18n:domain="plone"
+<object name="project_list" meta_type="Dexterity FTI" i18n:domain="quito.core"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title" i18n:translate="">Project List</property>
  <property name="description"
@@ -40,7 +40,7 @@
   <element value="plone.app.lockingbehavior.behaviors.ILocking"/>
   <element value="plone.app.versioningbehavior.behaviors.IVersionable"/>
  </property>
- <property name="schema"></property>
+ <property name="schema">quito.core.contenttypes.IProjectlist</property>
  <property
     name="model_source">&lt;model xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema"&gt;
     &lt;schema/&gt;
