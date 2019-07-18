@@ -34,7 +34,6 @@ report.html
 .vscode/
 .tox/
 reports/
-docker-compose.yml
 run_l.sh
 run_w.bat
 app.env
