@@ -34,9 +34,17 @@ report.html
 .vscode/
 .tox/
 reports/
-docker-compose.yml
 run_l.sh
 run_w.bat
+app.env
+db.env
+web.env
+quito.env
+Guide/mattermost-docker/install.sh
+Guide/mattermost-docker/test_install.sh
+Guide/mattermost-docker/install.bat
+Guide/mattermost-docker/test_install.bat
+mkf.sh
 # excludes
 !.coveragerc
 !.editorconfig
@@ -44,4 +52,4 @@ run_w.bat
 !.gitignore
 !.gitkeep
 !.travis.yml
-!src/quito
+!src/quito/

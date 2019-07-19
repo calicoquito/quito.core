@@ -1,0 +1,11 @@
+version: "2"
+services:
+  quito.core:
+    image: progsmart/quito.core:latest
+    restart: unless-stopped
+    volumes:
+    - ./quito.data/blobstorage:/data/blobstorage
+    - ./quito.data/filestorage:/data/filestorage
+    ports:
+    - "8080:8080"
+

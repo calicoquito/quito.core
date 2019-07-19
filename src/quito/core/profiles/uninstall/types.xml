@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object name="portal_types" meta_type="Plone Types Tool">
+ <property name="title">Controls the available content types in your portal</property>
+
+ <object name="task" meta_type="Dexterity FTI" remove="True" />
+ <object name="project" meta_type="Dexterity FTI" remove="True" />
+ <object name="task_list" meta_type="Dexterity FTI" remove="True" />
+ <object name="project_list" meta_type="Dexterity FTI" remove="True" />
+ <object name="group" meta_type="Dexterity FTI" remove="True"/>
+ <object name="user" meta_type="Dexterity FTI" remove="True"/>
+ <!-- -*- extra stuff goes here -*- -->
+</object>
