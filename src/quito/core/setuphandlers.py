@@ -2,10 +2,7 @@
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 from plone import api
-from mattermost import ploneCreateTeam
-from mattermost import ploneDeleteTeam
-from mattermost import ploneConfigMattermost
-from mattermost import  ploneAddAdmin
+from mattermost import *
 
 
 
@@ -27,6 +24,7 @@ def post_install(context):
     portal = api.portal.get()
     ploneCreateTeam(portal)
     ploneAddAdmin()
+    ploneAddlatentUsers()
 
 
 def uninstall(context):
