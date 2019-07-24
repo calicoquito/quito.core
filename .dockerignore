@@ -1,0 +1,12 @@
+#folders_to_ignore
+bin/
+develop-eggs/
+eggs/
+include/
+lib/
+local/
+parts/
+var/
+plonecli_install/
+Guide/
+docs/

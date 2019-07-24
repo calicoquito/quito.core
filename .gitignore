@@ -23,6 +23,7 @@ plonecli_install/
 quito.data/
 linux/
 windows/
+mattermost-docker/
 # files
 .installed.cfg
 .mr.developer.cfg

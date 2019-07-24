@@ -7,6 +7,7 @@ import pdb
 
 #Host = "http://localhost"+"/api/v4"
 #admin_username = "admin"
+
 error = -1
 good = 1
 
@@ -78,7 +79,7 @@ def createChannel(token, team_id, name_id = "project", name = "Project",descript
 	}
 	response = requests.post(url, data = json.dumps(data), headers = header)
 	if(response.status_code == 201):
-		return 0
+		return good
 	return error
 
 #Delete a channel using its ID	
@@ -289,7 +290,7 @@ def isAdminAdded(token, team_id):
 		if(len(members)>1): return True
 	return False
 
-def addLatentUsers(token, team_id, plone_usernames):
+def addLatentUsers(token, team_id, usernames):
 	#pdb.set_trace()
 	users_to_add = []
 	user_url = getHost()+"/users"
@@ -305,7 +306,7 @@ def addLatentUsers(token, team_id, plone_usernames):
 			team_members = response2.json()
 			team_members_id = [x["user_id"] for x in team_members]
 			members_username = [x["username"] for x in members]
-			for user in plone_usernames:
+			for user in usernames:
 				if(user in members_username):
 					user_id = members[members_username.index(user)]["id"]
 					if(not(user_id in team_members_id)):
@@ -318,6 +319,27 @@ def addLatentUsers(token, team_id, plone_usernames):
 								} 
 				response3 = requests.post(team_url, data = json.dumps(add_team_data), headers = header)
 			return good
+	return error
+
+def addAdminsToChannel(token, team_id, channel_id):
+	#pdb.set_trace()
+	admins = []
+	team_url = Host+"/teams/"+team_id+"/members"
+	header =  {'Authorization': 'Bearer ' + token, 
+			'Accept': 'application/json'}
+	response = requests.get(team_url, headers = header)
+	if(response.status_code == 200):
+		members = response.json()
+		for member in members:
+			if member["roles"] == "team_user team_admin":
+				user_url = Host+"/users/"+member["user_id"]
+				response2 = requests.get(user_url, headers = header)
+				if response2.status_code == 200:
+					user = response2.json()
+					admins.append(user["username"])
+		addMembersToChannel(token, team_id, channel_id, admins)
+		print admins
+		return good
 	return error
 	
 #Use by plone to create channel when project is created and add users
@@ -337,6 +359,7 @@ def ploneCreateChannel(item, event):
 			description = str(item.description)
 			createChannel(token,team_id, name_id, name, description)
 			channel_id = getChannelID(token, team_id, name_id)
+			addAdminsToChannel(token, team_id, channel_id)
 			addMembersToChannel(token, team_id,channel_id, item.members)
 
 #use by plone to delete a channel when a project is deleted	
@@ -364,6 +387,7 @@ def ploneModifyChannel(item, event):
 			name = str(item.title)
 			description = str(item.description)
 			modifyChannel(token, channel_id, name, description)
+			addAdminsToChannel(token, team_id, channel_id)
 			delMemberFromChannel(token, team_id,channel_id, item.members)
 			addMembersToChannel(token, team_id,channel_id, item.members)
 
@@ -422,14 +446,17 @@ def test2(item = "", event = ""):
 
 # if __name__== "__main__":
 # 	token = authenticate(admin_username,getSAPassword())
-# 	team_id = getTeamID(token,"plone10")
-# 	# print createChannel(token,team,"Test Project2")
+# 	eam_id = getTeamID(token,"quito")
+# 	#channel_id = getChannelID(token,team_id)
+# 	#deleteChannel(token, channel_id)
+# 	#print createChannel(token,team_id, "abcd")
 # 	#print team_id
-# 	# channel_id = getChannelID(token,team_id,"asshf")
+# 	channel_id = getChannelID(token,team_id, "abc")
 # 	# print addMembersToChannel(token, team_id, channel_id,["user1","user2","user3"])
 # 	# print delMemberFromChannel(token, team_id, channel_id,["user1"])
 # 	#print deleteTeam(token, team_id)
 # 	#print isAdminAdded(token, team_id)
 # 	#if(not isAdminAdded(token, team_id)):print addAdminToTeam(token, team_id)
 # 	#print addAdminToTeam(token, team_id)
-# 	print addLatentUsers(token, team_id, ["user1", "user2"])
+# 	#print addLatentUsers(token, team_id, ["user1", "user2"])
+# 	print addAdminToChannel(token, team_id, channel_id)
