@@ -10,6 +10,12 @@
       directory="overrides"
       layer="quito.core.interfaces.IQuitoCoreLayer"
       />
+  <browser:page
+    name="quito-core-controlpanel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".controlpanel.ControlPanelView"
+    permission="cmf.ManagePortal"
+    />
 
   <!-- Publish static files -->
   <plone:static
@@ -17,5 +23,6 @@
       type="plone"
       directory="static"
       />
+
 
 </configure>

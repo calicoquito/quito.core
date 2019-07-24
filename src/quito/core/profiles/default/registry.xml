@@ -1,5 +1,16 @@
 <?xml version="1.0"?>
 <registry>
+
+	<record name="quito.core.adminName">
+        <field type="plone.registry.field.TextLine">
+            <title>Super admin username</title>
+        </field>
+        <value>quito-bot</value>
+    </record>
+
+   <records interface="quito.core.browser.controlpanel.IControlPanel"
+         prefix="quito.core" />
+
 <!-- -*- extra stuff goes here -*- -->
 
 </registry>

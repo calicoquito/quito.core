@@ -58,9 +58,8 @@
   <subscriber
   for=".contenttypes.IUser
        zope.lifecycleevent.interfaces.IObjectAddedEvent"
-  handler=".mattermost.test2"
+  handler=".mattermost.test"
   />
-  
 
   <genericsetup:registerProfile
       name="default"

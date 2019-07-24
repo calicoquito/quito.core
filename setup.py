@@ -55,6 +55,7 @@ setup(
 	'requests',
 	'dexterity.membrane',
 	'Products.membrane',
+	'plone.app.registry',
 	
     ],
     extras_require={
