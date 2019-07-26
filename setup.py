@@ -52,12 +52,12 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi',
         'plone.app.dexterity',
-	'requests',
-	'dexterity.membrane',
-	'Products.membrane',
-	'plone.app.registry',
-	'plone.app.z3cform',
-	'cryptography',
+    	'requests',
+    	'dexterity.membrane',
+    	'Products.membrane',
+    	'plone.app.registry',
+    	'plone.app.z3cform',
+    	'cryptography',
 	
     ],
     extras_require={
