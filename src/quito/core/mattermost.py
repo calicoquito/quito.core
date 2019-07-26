@@ -129,7 +129,7 @@ def addMembersToChannel(token, team_id, channel_id, members = []):
 				if(userdata['username'] in members or userdata['nickname'] in members or fullname in members or userdata['email'] in members):
 					data = {"user_id": user['user_id']}
 					response3 = requests.post(add_url, data = json.dumps(data), headers = header)
-					print(response3.status_code)
+					#print(response3.status_code)
 
 	return good
 
@@ -150,7 +150,7 @@ def delMemberFromChannel(token, team_id, channel_id, members = []):
 				if (not (userdata['username'] in members or userdata['nickname'] in members or fullname in members or userdata['email'] in members or userdata['username'] == getSAUsername())):
 					del_url = getHost()+"/channels/"+channel_id+"/members/"+user['user_id']
 					response3 = requests.delete(del_url, headers = header)
-					print(response3.status_code)
+					#print(response3.status_code)
 	return good
 
 def createTeam(token, team_name = "Quito Team", types = "O"):
@@ -439,13 +439,13 @@ def test2(item = "", event = ""):
 
 
 # if __name__== "__main__":
-# 	token = authenticate(admin_username,getSAPassword())
-# 	eam_id = getTeamID(token,"quito")
+# 	#token = authenticate(admin_username,getSAPassword())
+# 	#eam_id = getTeamID(token,"quito")
 # 	#channel_id = getChannelID(token,team_id)
 # 	#deleteChannel(token, channel_id)
 # 	#print createChannel(token,team_id, "abcd")
 # 	#print team_id
-# 	channel_id = getChannelID(token,team_id, "abc")
+# 	#channel_id = getChannelID(token,team_id, "abc")
 # 	# print addMembersToChannel(token, team_id, channel_id,["user1","user2","user3"])
 # 	# print delMemberFromChannel(token, team_id, channel_id,["user1"])
 # 	#print deleteTeam(token, team_id)
@@ -453,4 +453,4 @@ def test2(item = "", event = ""):
 # 	#if(not isAdminAdded(token, team_id)):print addAdminToTeam(token, team_id)
 # 	#print addAdminToTeam(token, team_id)
 # 	#print addLatentUsers(token, team_id, ["user1", "user2"])
-# 	print addAdminToChannel(token, team_id, channel_id)
+# 	#print addAdminToChannel(token, team_id, channel_id)
