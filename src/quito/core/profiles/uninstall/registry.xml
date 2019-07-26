@@ -2,7 +2,7 @@
 <registry>
   
    <records interface="quito.core.browser.controlpanel.IControlPanel"
-         prefix="quito.core" />
+         prefix="quito.core" remove="True"/>
 
 <!-- -*- extra stuff goes here -*- -->
 
