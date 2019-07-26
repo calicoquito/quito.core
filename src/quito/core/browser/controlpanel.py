@@ -5,6 +5,7 @@ from plone.app.registry.browser.controlpanel import RegistryEditForm
 from plone.z3cform import layout
 from zope import schema
 from zope.interface import Interface
+import os 
 
 
 class IControlPanel(Interface):
@@ -13,7 +14,7 @@ class IControlPanel(Interface):
         title=u'Mattermost Host',
         description = u'url for the mattermost host',
         required=True,
-        default= 'http://localhost'
+        default= os.environ['MATTERMOST_HOST']
     )
 
     use_mattermost = schema.Bool(

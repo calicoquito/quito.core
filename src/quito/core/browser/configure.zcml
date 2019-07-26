@@ -6,10 +6,11 @@
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
   <include package="z3c.jbot" file="meta.zcml" />
+  
   <browser:jbot
       directory="overrides"
       layer="quito.core.interfaces.IQuitoCoreLayer"
-      />
+  />
   <browser:page
     name="quito-core-controlpanel"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"

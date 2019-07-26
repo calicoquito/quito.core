@@ -1,9 +1,13 @@
 from zope.component import getUtility
 from plone.registry.interfaces import IRegistry
 from plone import api
+#utility modules
 import requests, json
 import random, string
 import pdb
+import os
+import cryptography
+from cryptography.fernet import Fernet
 
 #Host = "http://localhost"+"/api/v4"
 #admin_username = "admin"
@@ -13,12 +17,11 @@ good = 1
 
 #get the host endpoinrt
 def getHost():
-	registry = getUtility(IRegistry)
+	registry = getUtility(IRegistry) 
 	return ""+registry['quito.core.mattermost_host']+"/api/v4"
 #get the quito.core super admin
 def getSAUsername():
-	registry = getUtility(IRegistry)
-	return str(registry['quito.core.adminName'])
+	return os.environ['SANAME']
 
 def useMattermost():
 	registry = getUtility(IRegistry)
@@ -175,11 +178,6 @@ def deleteTeam(token, team_id):
 	if response.status_code == 200: return good
 	return error
 
-def makePassword(stringLength=20):
-    """Generate a random string of letters, digits and special characters """
-    password_characters = string.ascii_letters + string.digits + string.punctuation
-    return ''.join(random.choice(password_characters) for i in range(stringLength))
-
 def createSuperAdmin(user_name, password):
 	try:
 		url = getHost()+"/users"
@@ -191,7 +189,7 @@ def createSuperAdmin(user_name, password):
 				}
 		response = requests.post(url, data = json.dumps(data), headers = header)
 		if(response.status_code == 201):
-			saveSAPassword(password)
+			#saveSAPassword(password)
 			return good
 		return error
 	except Exception:
@@ -199,21 +197,16 @@ def createSuperAdmin(user_name, password):
 
 def saveSAPassword(password):
 	#pdb.set_trace()
-	file = open("SA_CRED.enc","w")
-	file.write("1")
-	file.write(password)
-	file.close()
+	os.environ['sacred'] = password
 
 def getSAPassword():
-	try:	        
-		file = open("SA_CRED.enc","r")
-		response = file.read()
-		file.close()
-		if(response != ""):
-			if(response[0] == "1"):return response[1:]
-		return error
-	except Exception:
-		return error
+	#pdb.set_trace()
+	saved = os.environ['SACRED']
+	sep = saved.split("=LKsD0dgGHasfdfas23-dsa")
+	enc = sep[0]
+	key = sep[1]
+	f = Fernet(enc)
+	return f.decrypt(key)
 
 def setupConfiguration(token):
 	#pdb.set_trace()
@@ -324,7 +317,7 @@ def addLatentUsers(token, team_id, usernames):
 def addAdminsToChannel(token, team_id, channel_id):
 	#pdb.set_trace()
 	admins = []
-	team_url = Host+"/teams/"+team_id+"/members"
+	team_url = getHost()+"/teams/"+team_id+"/members"
 	header =  {'Authorization': 'Bearer ' + token, 
 			'Accept': 'application/json'}
 	response = requests.get(team_url, headers = header)
@@ -332,7 +325,7 @@ def addAdminsToChannel(token, team_id, channel_id):
 		members = response.json()
 		for member in members:
 			if member["roles"] == "team_user team_admin":
-				user_url = Host+"/users/"+member["user_id"]
+				user_url = getHost()+"/users/"+member["user_id"]
 				response2 = requests.get(user_url, headers = header)
 				if response2.status_code == 200:
 					user = response2.json()
@@ -411,8 +404,8 @@ def ploneDeleteTeam(portal):
 def ploneConfigMattermost():
 	if useMattermost() :
 		#pdb.set_trace()
-		if(getSAPassword() ==  error):
-			createSuperAdmin(getSAUsername(), makePassword())
+		if(authenticate(getSAUsername(), getSAPassword()) ==  error):
+			createSuperAdmin(getSAUsername(), getSAPassword())
 		token = authenticate(getSAUsername(), getSAPassword())
 		if token != error:
 			setupConfiguration(token)
@@ -442,7 +435,8 @@ def test(item = "", event = ""):
 
 def test2(item = "", event = ""):
 	print item
-	pdb.set_trace()
+	#pdb.set_trace()
+
 
 # if __name__== "__main__":
 # 	token = authenticate(admin_username,getSAPassword())
