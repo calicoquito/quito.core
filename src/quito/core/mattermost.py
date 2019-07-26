@@ -433,7 +433,7 @@ def test(item = "", event = ""):
 		ploneAddAdmin()
 		ploneAddlatentUsers()
 
-def test2(item = "", event = ""):
+#def test2(item = "", event = ""):
 	#print item
 	#pdb.set_trace()
 
