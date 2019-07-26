@@ -1,0 +1,20 @@
+# folders to ignore
+bin/
+buildout-cache/
+develop-eggs/
+eggs/
+htmlcov/
+include/
+lib/
+local/
+node_modules/
+parts/
+src/*
+dist/*
+test.plone_addon/
+var/
+plonecli_install/
+quito.data/
+linux/
+windows/
+mattermost-docker/
