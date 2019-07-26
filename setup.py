@@ -57,9 +57,6 @@ setup(
 	'Products.membrane',
 	'plone.app.registry',
 	'plone.app.z3cform',
-	'node.ext.zodb',
-	'souper.plone',
-	'souper',
 	'cryptography',
 	
     ],

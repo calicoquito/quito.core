@@ -439,18 +439,18 @@ def test2(item = "", event = ""):
 
 
 # if __name__== "__main__":
-# 	#token = authenticate(admin_username,getSAPassword())
-# 	#eam_id = getTeamID(token,"quito")
-# 	#channel_id = getChannelID(token,team_id)
-# 	#deleteChannel(token, channel_id)
-# 	#print createChannel(token,team_id, "abcd")
-# 	#print team_id
-# 	#channel_id = getChannelID(token,team_id, "abc")
-# 	# print addMembersToChannel(token, team_id, channel_id,["user1","user2","user3"])
-# 	# print delMemberFromChannel(token, team_id, channel_id,["user1"])
-# 	#print deleteTeam(token, team_id)
-# 	#print isAdminAdded(token, team_id)
-# 	#if(not isAdminAdded(token, team_id)):print addAdminToTeam(token, team_id)
-# 	#print addAdminToTeam(token, team_id)
-# 	#print addLatentUsers(token, team_id, ["user1", "user2"])
-# 	#print addAdminToChannel(token, team_id, channel_id)
+	#token = authenticate(admin_username,getSAPassword())
+	#eam_id = getTeamID(token,"quito")
+	#channel_id = getChannelID(token,team_id)
+	#deleteChannel(token, channel_id)
+	#print createChannel(token,team_id, "abcd")
+	#print team_id
+	#channel_id = getChannelID(token,team_id, "abc")
+	#print addMembersToChannel(token, team_id, channel_id,["user1","user2","user3"])
+	#print delMemberFromChannel(token, team_id, channel_id,["user1"])
+	#print deleteTeam(token, team_id)
+	#print isAdminAdded(token, team_id)
+	#if(not isAdminAdded(token, team_id)):print addAdminToTeam(token, team_id)
+	#print addAdminToTeam(token, team_id)
+	#print addLatentUsers(token, team_id, ["user1", "user2"])
+	#print addAdminToChannel(token, team_id, channel_id)
