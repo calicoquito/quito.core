@@ -331,7 +331,7 @@ def addAdminsToChannel(token, team_id, channel_id):
 					user = response2.json()
 					admins.append(user["username"])
 		addMembersToChannel(token, team_id, channel_id, admins)
-		print admins
+		#print admins
 		return good
 	return error
 	

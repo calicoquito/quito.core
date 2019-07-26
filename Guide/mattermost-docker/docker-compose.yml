@@ -24,6 +24,7 @@ services:
       - app
     env_file:
       - ./env/quito.env
+      - ./env/mattermost_cred.env
 
   db:
     build: db
