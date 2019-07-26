@@ -434,7 +434,7 @@ def test(item = "", event = ""):
 		ploneAddlatentUsers()
 
 def test2(item = "", event = ""):
-	print item
+	#print item
 	#pdb.set_trace()
 
 
