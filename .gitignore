@@ -24,6 +24,7 @@ quito.data/
 linux/
 windows/
 mattermost-docker/
+docs/build/
 # files
 .installed.cfg
 .mr.developer.cfg
