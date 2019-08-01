@@ -1,0 +1,25 @@
+.. Quito documentation master file, created by
+   sphinx-quickstart on Thu Aug  1 15:57:58 2019.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Quito Core documentation!
+=================================
+This is a documentation for developers and users of Quito Core 
+    print 'hello'
+    >> hello
+
+Guide
+^^^^^
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+   license
+   help
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
