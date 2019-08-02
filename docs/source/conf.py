@@ -26,7 +26,7 @@ author = u'Phillip Llewellyn'
 # The short X.Y version
 version = u'1.0a'
 # The full version, including alpha/beta/rc tags
-release = u'1.0a'
+release = u'1.0a1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -40,11 +40,6 @@ release = u'1.0a'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.todo',
-    'sphinx.ext.imgmath',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.githubpages',
     'recommonmark',
 ]
 
@@ -54,8 +49,8 @@ templates_path = ['ntemplates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+#source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'

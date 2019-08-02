@@ -1,6 +1,0 @@
-License
-=======
-
-fdgfgfgdgfgdf
-gfdgdfgdfgdfgdf
-fdgdfgfdgfdfdg

@@ -1,6 +1,2 @@
 Getting Started
-=================
-
-
-bcbgfdfgdfgdf
-dfgdfg
+===============
