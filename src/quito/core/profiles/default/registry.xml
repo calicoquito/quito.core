@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<registry>
-  
-   <records interface="quito.core.browser.controlpanel.IControlPanel"
-         prefix="quito.core" />
-
-<!-- -*- extra stuff goes here -*- -->
-
-</registry>
