@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  mattermost-push-proxy:
+    restart: unless-stopped
+    image: mattermost/mattermost-push-proxy:5.9.0
+    volumes:
+    - ./config:/config
+    ports:
+      - "8066:8066"
