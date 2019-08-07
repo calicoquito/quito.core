@@ -9,11 +9,12 @@ This is a documentation for developers and users of Quito Core
 
 .. toctree::
    :maxdepth: 3
-   :caption: Contents:
+   :caption: Table of Contents:
 
    introduction
    installation
    gettingstarted
+   guide
 
 Indices and tables
 ==================
