@@ -14,7 +14,7 @@ After you have succesfully installed Quito please follow the steps below to get 
   2. You need to now allow the nginx server to take priority on start up so you need to uncomment the depends on nginx code for **"quito"** and **"app"** service(Please take note of the indentation with the other lines of code to reduce errors).
      ![](images/dependson.png)
 
-  3. Remove the port mapping for quito.core ![](images/portq.png)and web services ![](images/portw.png)
+  3. Remove the port mapping for quito.core ![](images/portq.png)  and web services ![](images/portw.png)
 
 ***Please note you would need to setup the server hosting for nginx on your server***
 
