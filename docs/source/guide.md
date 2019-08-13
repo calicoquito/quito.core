@@ -11,10 +11,68 @@ Project List
 - No you cant have nested project list but you could have project list witht the criteria being set to another project list.  
 
 ##### Creation
+- To create a new Project List you would first need to Login to your Plone site for Quito. After doing so you need to select content 
+
+![](images/projectList/toContents.png)
+
+- In the root directory you can create a folder and enter the root of that folder or you could create the new project List in the root of your directory. For this tutorial a project list would be added to the root of the main directory. 
+
+![](images/projectList/toContent.png)
+
+- On the left of the screen you would see the **add new button**. Press it and then select Project list as shown below.
+
+![](images/projectList/addProlist.png)
+
+- When you have done that you would be greeted with the form for the project List. Enter the name and summary.
+
+![](images/projectList/add_p_list_screen.png)
+
+- For the project list you would need to add the criteria for the contents that you would like to search for in the list. The main criteria that you must have is the criteria of **type = Project**. You may select the criterias as shown in the picture below. 
+
+![](images/projectList/add_p_list_screen2.png)
+
+- When you are done you are able to write some html/ use the editor To show static content to describe the screen then press **Save**.
+
+![](images/projectList/save_Plist.png)
+
+- Successful creation would lead you to the Project List display screen. 
+
+![](images/projectList/plistcreated.png)
+
+- ***Congratulations you have created your project list***
 
 ##### Modification
+- You need to Login to Plone first
+- To modify your project List you first need to open into your project list 
+- when your on its display screen like below you need to select **Edit** from the menu on the left
+
+![](images/projectList/edit_plist.png)
+
+- After you should be greeted with the screen with the forms.
+
+![](images/projectList/edit_plist_screen1.png)
+
+- Make your changes and after you have editted your project list press the **Save** button
+
+![](images/projectList/save_plist_edit.png)
+
+- Your changes have been made and your project list editted.
 
 ##### Deltetion
+*Warning this process is not reversable*
+- You need to login to plone first 
+- To delete your project you need enter into your project list. 
+- In your project on the left side of the screen select the Actions button
+
+![](images/projectList/go_to_del_plist.png)
+
+- After you would see the option to **delete** select the option
+
+![](images/projectList/plist_press_del.png)
+
+- Finally you would need to confirm the delete (note this object would not be able to be retrieved after this).
+
+![](images/projectList/confirm_plist_del.png)
 
 Project
 --------
