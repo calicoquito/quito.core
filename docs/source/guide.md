@@ -82,10 +82,83 @@ Project
 - A creation of a project in plone will prompt a creation of a channel in mattermost. The member of the project will be added to the channel if they are available. 
 
 ##### Creation
+*For this tutorial we would create a project in the main directory*
+- To start you first need to login into your Quito plone website.
+- Afer Login on the left side of the screen select the Contents option.
+- At this point you are able to change your directory to something of your liking.
+
+![](images/projectList/toContents.png)
+
+- When you have selected your directory you need to select add new then Project
+
+![](images/project/add.png)
+
+- You would be prompted with a screen to fill in the Project information.
+- Enter the name of the project and a description
+- Enter the *(username/fullname with space/ email)* for each member of the project
+- Enter the start and End date for the event
+-you could select an whole day event or open ended(without an end date)
+
+![](images/project/add_screen1.png)
+
+- The contact infromation would be needed for the organizer of the project along with other information to define it as shown below.
+- upload an image for the project 
+- set the recurrance for the event if it would repeat
+
+![](images/project/add_screen2.png)
+
+- Finally you should be able to enter additionaly information for your project in the Text field, you are able to use html or the editor to do it as well. 
+
+![](images/project/add_screen3.png)
+
+- Now press save
+- On successful creation of your new project, you should be greeted witht the project screen listing the information that you have inputted.
+
+![](images/project/new.png)
+
+- If you are running quito with mattermost. A channel should also be created along with the project screen in plone detailing the same information that you have placed in.
+
+![](images/project/add_mat.png)
+
+***Congratulations you have created your Project***
 
 ##### Modification
+- First you would need to login to your plone website
+- After logging select and enter the project that you would like to edit.
+- To the left of the screen you would see the option to edit, select that option.
+
+![](images/project/edit1.png)
+
+- You would reach the screen to similar to when you were creating the project
+- Make the changes that you need to make
+- For the tutorial i changes the name of the project
+
+![](images/project/edit2.png)
+
+- When you have made all your changes scroll to the bottom of your screen and select save.
+
+![](images/project/edit_save.png)
+
+- A successful edit would lead you to the Project display screen showing the information that was changed.
+
+- If you have a mattermost server the necessary changes should aslo reflect on the mattermost server. 
+
+![](images/project/edit_mat.png)
 
 ##### Deltetion
+*Warning this process is not reversable*
+- First you would need to login to your plone website
+- After logging select and enter the project that you would like to edit.
+- On the left of the screen you would see the Action option
+- Select the action option then press delete
+- you would be asked to confirm your action, select delete once more to make your confirmation
+
+![](images/project/del.png)
+
+- A successfull delete would cause the Project to be removed from the directory and also the channel for the project also removed from mattermost
+
+![](images/project/del_mat.png)
+
 
 Task
 -----
@@ -94,9 +167,60 @@ Task
 
 ##### Creation
 
+*For this tutorial the task would be created inside of a project called concert that was previously created*
+- To start you first need to login into your Quito plone website.
+- Afer Login on the left side of the screen select the add new option.
+- Now select Task
+
+![](images/task/add.png)
+
+- Next you will be sent to the task configuration screen
+- Enter the name and description for the task
+- Enter the *(username/fullname with space/ email)* for each member appointed to the task
+
+![](images/task/add_screen1.png)
+
+- Enter the task Detail then save the task
+
+![](images/task/add_screen2.png)
+
+- You should be sent to the screen showing the task information that you have created
+
+***Congratulations you have created a task***
+
 ##### Modification
 
+- First you would need to login to your plone website
+- After logging select and enter into the task that you would like to edit.
+- On the left of the screen select the **edit** option
+
+![](images/task/edit.png)
+
+- You will be sent to the screen to edit the information
+- For this tutorial i will only edit name of the task
+- Change the necessary informtion that you wiol like to change
+
+![](images/task/edit_screen1.png)
+
+- Finally, scroll to the bottom of the screen then press save
+
+![](images/task/edit_save.png)
+
+- on successful edit you should be sent to the Task screen with the information changed
+
+![](images/task/edit_view.png)
+
 ##### Deltetion
+*Warning this process is not reversable*
+- First you would need to login to your plone website
+- After logging select and enter into the task that you would like to edit.
+- On the left of the screen select the **actions** option then press delete.
+
+![](images/task/del.png)
+
+- It will then ask to confirmy your delete. Select delete to confirm your delete
+
+![](images/task/del2.png)
 
 Task List
 ----------
@@ -104,10 +228,54 @@ Task List
 - A task list can only exist within a project
 
 ##### Creation
+*For this tutorial the task list would be created inside of a project called concert that was previously created*
+- To start you first need to login into your Quito plone website.
+- Afer Login on the left side of the screen select the add new option.
+- Now select *Task List*
+
+![](images/taskList/add.png)
+
+- Next you will be sent to the task List configuration screen
+- Enter the name and description for the task List
+- Select save when finish
+
+![](images/taskList/save.png)
+
+- You should be sent to the screen showing the task List information that you have created.
+- It will also be empty until you add Tasks to the list
+
+![](images/taskList/view.png)
+
+***Congratulations you have created a task***
 
 ##### Modification
+- First you would need to login to your plone website
+- After logging select and enter into the task List that you would like to edit.
+
+- On the left of the screen select the **edit** option
+
+![](images/taskList/edit.png)
+
+- Make the changes that you would like. For this tutorial I only changed the name
+- When you are done select save
+
+![](images/taskList/edit_save.png)
+
+- On successfull edit your changes should be saved and displayed on the Task List display
+
+![](images/taskList/edit_view.png)
 
 ##### Deltetion
+*Warning this process is not reversable*
+- First you would need to login to your plone website
+- After logging select and enter into the Task List that you would like to edit.
+- On the left of the screen select the **actions** option then press delete.
+
+![](images/taskList/del.png)
+
+- It will prompt you to confirm your delete. To do so press delte. 
+
+![](images/taskList/del2.png)
 
 Groups
 ------
@@ -116,7 +284,48 @@ Groups
 - A group can only exist within a taks list or task
 
 ##### Creation
+*For this tutorial the task list would be created inside of a project called concert that was previously created*
+- To start you first need to login into your Quito plone website.
+- Afer Login on the left side of the screen select the add new option.
+- Now select *Group*
+
+![](images/group/add.png)
+
+- Next you will be sent to the Group configuration screen
+- Enter the name and description for the Group
+- Enter the *(username/fullname with space/ email)* for each member apart of the group
+- Select save when finish
+
+![](images/group/save.png)
+
+- You should be sent to the screen showing the Group information that you have created.
+
+![](images/group/view.png)
 
 ##### Modification
+- First you would need to login to your plone website
+- After logging select and enter into the group that you would like to edit.
+- On the left of the screen select the **edit** option
+
+![](images/group/edit.png)
+
+- Make the changes that you would like. For this tutorial I only changed the name
+- When you are done select save
+
+![](images/group/edit_save.png)
+
+- On successfull edit your changes should be saved and displayed on the group's display
+
+![](images/group/edit_view.png)
 
 ##### Deltetion
+*Warning this process is not reversable*
+- First you would need to login to your plone website
+- After logging select and enter into the group that you would like to edit.
+- On the left of the screen select the **actions** option then press delete.
+
+![](images/group/del.png)
+
+- It will prompt you to confirm your delete. To do so press delte. 
+
+![](images/group/del2.png)
