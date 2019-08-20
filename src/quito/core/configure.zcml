@@ -85,5 +85,7 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <include package=".api" />
+
 
 </configure>
