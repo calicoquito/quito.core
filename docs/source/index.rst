@@ -15,6 +15,8 @@ This is a documentation for developers and users of Quito Core
    installation
    gettingstarted
    guide
+   developers_guide
+   
 
 Indices and tables
 ==================

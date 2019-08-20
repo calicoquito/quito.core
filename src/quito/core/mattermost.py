@@ -24,8 +24,12 @@ def getSAUsername():
 	return os.environ['SANAME']
 
 def useMattermost():
-	registry = getUtility(IRegistry)
-	return registry['quito.core.use_mattermost']
+	#pdb.set_trace()
+	try:
+		registry = getUtility(IRegistry)
+		return registry['quito.core.use_mattermost']
+	except Exception:
+		return True
 	 
 # get the team name 
 def getTeamName():
@@ -427,7 +431,7 @@ def ploneAddlatentUsers():
 			users_usernames = [x.getUserName() for x in users]
 			addLatentUsers(token, team_id, users_usernames)
 
-def test(item = "", event = ""):
+def ploneDataCheck(item = "", event = ""):
 	if useMattermost() :
 		#pdb.set_trace()
 		ploneAddAdmin()
