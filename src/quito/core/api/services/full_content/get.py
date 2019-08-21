@@ -11,6 +11,7 @@ import os, pdb
 
 error = -1
 identifier_name = "data"
+enabledDatatype = ["Folder", "Plone Site", "project_list", "project"]
 
 # Restful Api GET JSON get function for content manipulation
 def getContentJson(context, request):
@@ -50,11 +51,11 @@ class FullContent(object):
         # === Your custom code comes here ===
         #pdb.set_trace()
         main_data = getContentJson(self.context, self.request)
-        if(main_data["@type"] == "Folder"):
+        if(main_data["@type"] in enabledDatatype):
             main_data.pop('@components', None)
             root_context = self.context
             for index, item in enumerate(main_data["items"]):
-                if(item["@type"] == "project" or item["@type"] == "group"):
+                if(item["@type"] == "project" or item["@type"] == "group" or item["@type"] == "task"):
                     primary_context = getContentContext(root_context, item["@id"])
                     primary_request = self.request
                     primary_request["ACTUAL_URL"] = item["@id"]
