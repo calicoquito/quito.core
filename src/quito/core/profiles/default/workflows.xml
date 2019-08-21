@@ -11,6 +11,9 @@
          <type type_id="project_list">
             <bound-workflow workflow_id="quito.core.one_state_workflow"/>
         </type>
+        <type type_id="Folder">
+            <bound-workflow workflow_id="quito.core.one_state_workflow"/>
+        </type>
         <type type_id="group"/>
         <type type_id="user"/>
         <type type_id="task"/>

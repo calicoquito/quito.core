@@ -339,6 +339,28 @@ def addAdminsToChannel(token, team_id, channel_id):
 		return good
 	return error
 	
+def removeAllUsersFromProject(project):
+	ploneMembers = api.user.get_users()
+	for user in ploneMembers:
+		api.user.revoke_roles(username=user.id,roles=['Editor', 'Reader'],obj=project)
+
+def addUserToProject(project):
+	members = project.members
+	ploneMembers = api.user.get_users()
+	availableMember = []
+	for user in ploneMembers:
+		if(user.id in members or user.getProperty('email') in members or user.getProperty('fullname') in members):
+			availableMember.append(user.id)
+	for member in availableMember:
+		api.user.grant_roles(username=member,roles=['Editor', 'Reader'],obj=project)
+
+def ploneAddUsersToProject(item, event):
+	addUserToProject(item)
+
+def ploneUpdateProjectUsers(item, event):
+	removeAllUsersFromProject(item)
+	addUserToProject(item)
+
 #Use by plone to create channel when project is created and add users
 def ploneCreateChannel(item, event):
 	if useMattermost() :

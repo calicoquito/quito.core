@@ -29,6 +29,12 @@
 
   <subscriber
   for=".contenttypes.IProject
+       zope.lifecycleevent.interfaces.IObjectAddedEvent"
+  handler=".mattermost.ploneAddUsersToProject"
+  />
+
+  <subscriber
+  for=".contenttypes.IProject
        zope.lifecycleevent.interfaces.IObjectRemovedEvent"
   handler=".mattermost.ploneDeleteChannel"
   />
@@ -40,6 +46,13 @@
   />
 
   <subscriber
+  for=".contenttypes.IProject
+       zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+  handler=".mattermost.ploneUpdateProjectUsers"
+  />
+
+  
+  <subscriber
   for="Products.PluggableAuthService.interfaces.events.IPrincipalCreatedEvent"
   handler=".mattermost.ploneDataCheck"
   />
@@ -50,13 +63,17 @@
   />
 
   <subscriber
-  for=".contenttypes.IProjectlist
-       zope.lifecycleevent.interfaces.IObjectAddedEvent"
+  for="zope.lifecycleevent.IObjectCreatedEvent"
   handler=".mattermost.ploneDataCheck"
   />
 
   <subscriber
-  for="zope.lifecycleevent.IObjectCreatedEvent"
+  for="zope.lifecycleevent.IObjectModifiedEvent"
+  handler=".mattermost.ploneDataCheck"
+  />
+
+  <subscriber
+  for="zope.lifecycleevent.IObjectRemovedEvent"
   handler=".mattermost.ploneDataCheck"
   />
 
