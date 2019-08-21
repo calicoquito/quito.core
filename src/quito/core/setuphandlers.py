@@ -4,7 +4,7 @@ from zope.interface import implementer
 from plone import api
 from mattermost import *
 
-
+# replace portal with context and completely delete the portal variable
 
 
 @implementer(INonInstallable)
