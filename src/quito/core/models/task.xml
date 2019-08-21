@@ -15,5 +15,10 @@
       <title>Complete</title>
       <form:widget type="z3c.form.browser.radio.RadioFieldWidget"/>
     </field>
+    <field name="extras" type="plone.schema.jsonfield.JSONField">
+      <description>extra field to store property information on task</description>
+      <required>False</required>
+      <title>Extras</title>
+    </field>
   </schema>
 </model>
