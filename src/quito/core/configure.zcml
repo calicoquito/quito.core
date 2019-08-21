@@ -21,16 +21,14 @@
 
   <include file="upgrades.zcml" />
 
-  <subscriber
-  for=".contenttypes.IProject
-       zope.lifecycleevent.interfaces.IObjectAddedEvent"
-  handler=".mattermost.ploneCreateChannel"
-  />
+  <!--
+    Mattermost Integration Event Handlers
+  -->
 
   <subscriber
   for=".contenttypes.IProject
        zope.lifecycleevent.interfaces.IObjectAddedEvent"
-  handler=".mattermost.ploneAddUsersToProject"
+  handler=".mattermost.ploneCreateChannel"
   />
 
   <subscriber
@@ -44,13 +42,6 @@
        zope.lifecycleevent.interfaces.IObjectModifiedEvent"
   handler=".mattermost.ploneModifyChannel"
   />
-
-  <subscriber
-  for=".contenttypes.IProject
-       zope.lifecycleevent.interfaces.IObjectModifiedEvent"
-  handler=".mattermost.ploneUpdateProjectUsers"
-  />
-
   
   <subscriber
   for="Products.PluggableAuthService.interfaces.events.IPrincipalCreatedEvent"
@@ -75,6 +66,22 @@
   <subscriber
   for="zope.lifecycleevent.IObjectRemovedEvent"
   handler=".mattermost.ploneDataCheck"
+  />
+
+  <!--
+    Plone Script Event handlers
+  -->
+
+  <subscriber
+  for=".contenttypes.IProject
+       zope.lifecycleevent.interfaces.IObjectAddedEvent"
+  handler=".quito_scripts.ploneAddUsersToProject"
+  />
+
+  <subscriber
+  for=".contenttypes.IProject
+       zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+  handler=".quito_scripts.ploneUpdateProjectUsers"
   />
 
   <genericsetup:registerProfile
