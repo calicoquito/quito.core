@@ -6,6 +6,7 @@
 
   <plone:service
     method="GET"
+    accept="application/json"
     for="zope.interface.Interface"
     factory=".get.FullContentGet"
     name="@full_content"

@@ -59,6 +59,7 @@ setup(
     	'plone.app.z3cform',
     	'cryptography',
         'collective.wtf',
+        'plone.rest',
 	
     ],
     extras_require={
