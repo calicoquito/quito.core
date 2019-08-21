@@ -4,16 +4,15 @@ from plone import api
 #utility modules
 import requests, json
 import random, string
-import pdb
-import os
+import os, pdb
 import cryptography
 from cryptography.fernet import Fernet
 
 #Host = "http://localhost"+"/api/v4"
 #admin_username = "admin"
 
-error = -1
-good = 1
+error = '-1'
+good = '1'
 
 #get the host endpoinrt
 def getHost():

@@ -3,6 +3,8 @@ from plone import api
 from mattermost_helper import *
 import string, pdb
 
+error = '-1'
+good = '1'
 
 #Use by plone to create channel when project is created and add users
 def ploneCreateChannel(item, event):
@@ -99,9 +101,11 @@ def ploneAddlatentUsers():
 def ploneDataCheck(item = "", event = ""):
 	if useMattermost() :
 		#pdb.set_trace()
-		ploneAddAdmin()
-		ploneAddlatentUsers()
-
+		try:
+			ploneAddAdmin()
+			ploneAddlatentUsers()
+		except Exception:
+			print"============ Data Check Failed ================="
 #def test2(item = "", event = ""):
 	#print item
 	#pdb.set_trace()
