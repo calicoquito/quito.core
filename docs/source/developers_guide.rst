@@ -7,4 +7,6 @@ This Guide is created is to aid future developers in understanding how to contri
    :maxdepth: 2
    :caption: Developers Guide:
 
-   introduction
+   quito_core_api
+   setup_files
+   mattermost_integration
