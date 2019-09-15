@@ -18,25 +18,14 @@ Features
 - Three user group with varying permissions (organizer, volunteer, participant)
 - Commenting or chat capability for projects 
 
-
-
 Documentation
 -------------
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://quitocore.rtfd.io/
+Full documentation for end users and developers can be found in the "docs" folder, and is also available online at http://quitocore.rtfd.io/
 
 Latest Release
 ---------------
-- The latest Release for quito.core is currently pre-alpha v00002. This version is not for production and mainly for testing procedure. It includes the documentation on how to installl Quito.core using docker on either Linux or windows. It has troubleshooting techniques that can be used to mnually install quito. It contains both data volume for the docker installation as well as an insomina file explaining the various api comands that can be used to managed the platform. This release Only focuses on the creation and viewing of projects with its various tasks using three types of user with different permisiions. 
-
-- The discusiion capability wasadded to v00002 so that the participants of project would be able to communicate with each other on a specific  Project. Only the administrator would be able to delete any messages sent from anyone.  
-
-Setup with Docker
------------------
-To setup quito.core download the installation file for the latest release version and follow the installation instructions.
-On startup you would be greeted with the homepage along with some test data that was previously installed to the system. The system can be left like this or customize base on your preference.
-
-- The latest installation version currently is pre-alpha v00002
+- The latest Release for quito.core is Alpha2.0 it can be found at https://github.com/calicoquito/quito.core/releases/tag/v1.0-alpha2  
 
 Installation
 ------------
@@ -56,7 +45,7 @@ Launch with the following command::
     ./bin/instance fg
 
 
-Create Docker Image
+Create own Docker Image
 *******************
 
 From the root folder of this addon run:
@@ -71,11 +60,6 @@ Then you can launch it with (replace <imagehash> with your docker image hash:
 ::
 
    docker run -it -p 8080:8080 <imagehash>
-
-How to use API
----------------
-An Insomnia file relating to the use of the quito.core api can be found under the guide directory. 
-It cantains the api calls as well as the relating documentations on how to use them.
 
 Installation of Addon To A Plone Site
 --------------------------------------
@@ -97,7 +81,7 @@ Contribute
 
 - Issue Tracker: https://github.com/calicoquito/quito.core/issues
 - Source Code: https://github.com/calicoquito/quito.core
-- Documentation: https://docs.plone.org/foo/bar
+- Documentation: http://quitocore.rtfd.io/
 
 
 Support
