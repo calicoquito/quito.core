@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='quito.core',
-    version='1.0a1.2',
+    version='1.0a2',
     description="Quito Core API",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers

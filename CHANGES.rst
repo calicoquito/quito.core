@@ -6,7 +6,7 @@ Unreleased
 ----------
 
 
-1.0a1.2 - 2019-08-26
+1.0a2 - 2019-08-26
 --------------------
 
 Added
@@ -18,6 +18,7 @@ Added
 - User and Developer Documentation 
 - set one state workflow to folders
 - mattermost push proxy server
+- Changelog
 
 Changed
 ^^^^^^^

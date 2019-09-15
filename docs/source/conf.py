@@ -21,13 +21,13 @@ import sys, os
 # -- Project information -----------------------------------------------------
 
 project = u'Quito'
-copyright = u'2019, Phillip Llewellyn'
-author = u'Phillip Llewellyn'
+copyright = u'2019, Calico Pallisadoes'
+author = u'Calico Pallisadoes'
 
 # The short X.Y version
 version = u'1.0a'
 # The full version, including alpha/beta/rc tags
-release = u'1.0a1'
+release = u'1.0a2'
 
 
 # -- General configuration ---------------------------------------------------

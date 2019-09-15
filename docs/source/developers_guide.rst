@@ -9,4 +9,4 @@ This Guide is created is to aid future developers in understanding how to contri
 
    quito_core_api
    setup_files
-   mattermost_integration
+   integrations_and scripts

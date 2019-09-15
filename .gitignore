@@ -21,9 +21,6 @@ test.plone_addon/
 var/
 plonecli_install/
 quito.data/
-linux/
-windows/
-mattermost-docker/
 docs/build/
 # files
 .installed.cfg
@@ -36,17 +33,6 @@ report.html
 .vscode/
 .tox/
 reports/
-run_l.sh
-run_w.bat
-app.env
-db.env
-web.env
-quito.env
-Guide/mattermost-docker/install.sh
-Guide/mattermost-docker/test_install.sh
-Guide/mattermost-docker/install.bat
-Guide/mattermost-docker/test_install.bat
-mkf.sh
 # excludes
 !.coveragerc
 !.editorconfig

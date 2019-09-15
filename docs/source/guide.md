@@ -58,7 +58,7 @@ Project List
 
 - Your changes have been made and your project list editted.
 
-##### Deltetion
+##### Deletetion
 *Warning this process is not reversable*
 - You need to login to plone first 
 - To delete your project you need enter into your project list. 
@@ -145,7 +145,7 @@ Project
 
 ![](images/project/edit_mat.png)
 
-##### Deltetion
+##### Deletetion
 *Warning this process is not reversable*
 - First you would need to login to your plone website
 - After logging select and enter the project that you would like to edit.
@@ -210,7 +210,7 @@ Task
 
 ![](images/task/edit_view.png)
 
-##### Deltetion
+##### Deletetion
 *Warning this process is not reversable*
 - First you would need to login to your plone website
 - After logging select and enter into the task that you would like to edit.
@@ -265,7 +265,7 @@ Task List
 
 ![](images/taskList/edit_view.png)
 
-##### Deltetion
+##### Deletetion
 *Warning this process is not reversable*
 - First you would need to login to your plone website
 - After logging select and enter into the Task List that you would like to edit.
@@ -318,7 +318,7 @@ Groups
 
 ![](images/group/edit_view.png)
 
-##### Deltetion
+##### Deletetion
 *Warning this process is not reversable*
 - First you would need to login to your plone website
 - After logging select and enter into the group that you would like to edit.
