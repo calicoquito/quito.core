@@ -9,7 +9,7 @@ quito.core
 Quito is an open source project to manage the operations of Organisation, with an initial focus on churches. The software will enable churches to automate common administrative, management and reporting tasks. This will help the Church Leadership Team to improve communications, streamline daily operations and support collaboration.The system would be modular which would make developing the software and customizing the software easier for the users.
 
 Features
---------
+*********
 
 - Creation of projects/Events
 - creation of a tasks list for the project
@@ -19,16 +19,13 @@ Features
 - Commenting or chat capability for projects 
 
 Documentation
--------------
+**************
 
 Full documentation for end users and developers can be found in the "docs" folder, and is also available online at http://quitocore.rtfd.io/
 
 Latest Release
----------------
+**************
 - The latest Release for quito.core is Alpha2.0 it can be found at https://github.com/calicoquito/quito.core/releases/tag/v1.0-alpha2  
-
-Installation
-------------
 
 Source File
 ************
