@@ -17,7 +17,7 @@ Complete with Mattermost
 To install Quito on linux you would need to download and run install.sh.
 This can be done in the terminal by running the following lines of command.
 ```
-wget https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/install.sh
+wget https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/install.sh
 chmod +x install.sh
 ./install.sh
 ```
@@ -29,12 +29,12 @@ This can be done in the terminal by running the following lines of command.
 ```
 CMD
 ----
-powershell -c "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/install.bat' -OutFile ${PWD}/install.bat"
+powershell -c "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/install.bat' -OutFile ${PWD}/install.bat"
 install.bat
 
 Powershell
 ----------
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/install.bat' -OutFile ${PWD}/install.bat
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/install.bat' -OutFile ${PWD}/install.bat
 ./install.bat
 
 ```
@@ -50,7 +50,7 @@ The partial installation for your operating system is below.
 To install Quito on linux you would need to download and run quito_installer_linux.sh
 This can be done in the terminal by running the following lines of command.
 ```
-wget https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/quito_installer_linux.sh
+wget https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/quito_installer_linux.sh
 chmod +x quito_installer_linux.sh
 ./quito_installer_linux.sh
 ```
@@ -64,12 +64,12 @@ This can be done in the terminal by running the following lines of command.
 ```
 CMD
 ----
-powershell -c "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/quito_installer_windows.bat' -OutFile ${PWD}/quito_installer_windows.bat"
+powershell -c "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/quito_installer_windows.bat' -OutFile ${PWD}/quito_installer_windows.bat"
 quito_installer_windows.bat
 
 Powershell
 ----------
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/quito_installer_windows.bat' -OutFile ${PWD}/quito_installer_windows.bat
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/quito_installer_windows.bat' -OutFile ${PWD}/quito_installer_windows.bat
 ./quito_installer_windows.bat
 
 ```
@@ -84,16 +84,16 @@ Test Data
 Linux 
 -------
 
-wget https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/quito_test_data.tar.gz
+wget https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/quito_test_data.tar.gz
 tar xvfz quito_test_data.tar.gz
 rm -rf quito_test_data.tar.gz
 
 Windows
 -------
 
-powershell -c "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/quito_test_data.zip' -OutFile ${PWD}/quito_test_data.zip"
+powershell -c "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest -Uri 'https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/quito_test_data.zip' -OutFile ${PWD}/quito_test_data.zip"
 powershell -c "Expand-Archive "${PWD}/quito_test_data.zip" ${PWD}"
 del /f quito_test_data.zip
 ```
-This can also be acccomplished by downloading the [zip file](https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha1.1/quito_test_data.zip) and unzipping it in the quito directory
+This can also be acccomplished by downloading the [zip file](https://github.com/calicoquito/quito.core/releases/download/v1.0-alpha2/quito_test_data.zip) and unzipping it in the quito directory
 
